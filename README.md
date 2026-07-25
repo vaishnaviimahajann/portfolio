@@ -1,31 +1,39 @@
-# Vaishnavi Mahajan — Portfolio
+# Vaishnavi Mahajan — Portfolio 💼
 
-## Run locally (VS Code)
+My personal developer portfolio — built to showcase my projects, skills, and experience as a Full Stack Developer with a growing focus on AI, ML, and Data Science.
 
-1. Open this folder in VS Code
-2. Open terminal, run:
-   ```
-   npm install
-   npm run dev
-   ```
-3. Open the link it prints (usually http://localhost:5173)
+🔗 **Live Site:** [Coming soon after deployment]
 
-## Before deploying — fill these in
+---
 
-- `src/App.jsx` → `PROJECTS` array: replace each `github` URL with the exact repo link (ChatVerse, VolunteerBridge, SkillSync)
-- `src/App.jsx` → `LINKS.leetcode`: add your LeetCode profile URL
-- `public/photo.jpg` → replace if you want a different photo (keep the filename `photo.jpg`, or update the `src="/photo.jpg"` in App.jsx)
-- `public/resume.pdf` → already added from your uploaded resume; replace anytime by dropping a new `resume.pdf` in `public/`
+## 📌 About
 
-## Deploy (Vercel — easiest)
+This is a single-page React portfolio designed to give recruiters a quick, clean overview of who I am, what I've built, and how to reach me — no clutter, just what matters.
 
-1. Push this folder to a GitHub repo
-2. Go to https://vercel.com → New Project → import the repo
-3. Framework preset: Vite (auto-detected) → Deploy
-4. Done — you'll get a live URL to share with recruiters
+---
 
-## Deploy (Netlify)
+## ✨ Features
 
-1. Push to GitHub
-2. https://app.netlify.com → Add new site → Import from Git
-3. Build command: `npm run build`, publish directory: `dist`
+- 🎨 Clean, minimal single-page design with smooth scroll navigation
+- 👩‍💻 About section — background, interests, and club memberships
+- 🛠️ Skills section with all core technologies I work with
+- 📂 Projects section — real projects with descriptions, tech stack, and links
+- 📇 Contact section — Email, LinkedIn, GitHub, LeetCode, and Resume all in one place
+- 📱 Fully responsive — works on mobile, tablet, and desktop
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Frontend | React.js (Vite) |
+| Icons | Lucide React |
+| Styling | Custom CSS-in-JS (no framework) |
+| Deployment | Vercel |
+| Containerization | Docker + Nginx (optional, for Render deploys) |
+| CI/CD | GitHub Actions |
+
+---
+
+\
