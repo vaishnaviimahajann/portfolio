@@ -35,5 +35,3 @@ This is a single-page React portfolio designed to give recruiters a quick, clean
 | CI/CD | GitHub Actions |
 
 ---
-
-\
