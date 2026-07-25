@@ -53,6 +53,13 @@ const PROJECTS = [
     live: "#",
   },
   {
+  name: "Portfolio Website",
+  desc: "My personal developer portfolio, built from scratch with React and deployed using Docker with a full CI/CD pipeline via GitHub Actions.",
+  tags: ["React", "Docker", "Nginx", "GitHub Actions", "CI/CD"],
+  github: "https://github.com/vaishnaviimahajann/portfolio",
+  live: "https://portfolio-p0zp.onrender.com",
+ },
+  {
     name: "SkillSync",
     desc: "A platform for college students to find skill-based teammates. Includes discovery/search by skill, connection requests, profile management, and real-time chat via Socket.io.",
     tags: ["React", "Node.js", "Express", "MongoDB", "Socket.io", "JWT"],
