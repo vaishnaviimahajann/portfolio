@@ -187,8 +187,7 @@ export default function App() {
         <h2 style={{ fontSize: "13px", letterSpacing: "0.1em", color: GRAD1, fontWeight: 700, marginBottom: "16px" }}>ABOUT ME</h2>
         <div style={{ background: T.card, border: `1px solid ${T.line}`, borderRadius: "12px", padding: "28px", boxShadow: T.shadow }}>
           <p style={{ color: T.dim, lineHeight: 1.75, fontSize: "15px", margin: 0 }}>
-  I'm a B.Tech Computer Science student at Dr. D. Y. Patil Institute of
-  Technology, Pune, under Dnyaneshwar Vidyapeeth Global University
+  I'm a B.Tech Computer Science student at Dr. D. Y. Patil ( Dyaan prasad Global university)
   (DYPDPGU) — currently in my second year and already deep into building
   real-world web applications. My stack of choice is MERN (MongoDB,
   Express.js, React, Node.js). I love the full picture — from designing
