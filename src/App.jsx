@@ -186,19 +186,35 @@ export default function App() {
       <section id="about" className="section" style={{ maxWidth: "720px", margin: "0 auto", padding: "40px 24px" }}>
         <h2 style={{ fontSize: "13px", letterSpacing: "0.1em", color: GRAD1, fontWeight: 700, marginBottom: "16px" }}>ABOUT ME</h2>
         <div style={{ background: T.card, border: `1px solid ${T.line}`, borderRadius: "12px", padding: "28px", boxShadow: T.shadow }}>
-         <p style={{ color: T.dim, lineHeight: 1.75, fontSize: "15px", margin: 0 }}>
-  I'm a B.Tech Computer Science student at Dr. D. Y. Patil Institute of
-  Technology, Pune — currently in my second year and already deep into
-  building real-world web applications. My stack of choice is MERN
-  (MongoDB, Express.js, React, Node.js). I love the full picture — from
-  designing the UI to wiring up APIs and databases. Beyond web dev, I'm
-  actively exploring Artificial Intelligence & Data Science, which is
-  where I see my future headed. I recently completed a Web Development
-  Internship at Drops of Change Welfare NGO, where I built and maintained
-  web solutions for social welfare initiatives. I'm also a Technical Team
-  member at Kryptonex Tech & Innovation Club and a member of the Lumi
-  Vision Club.
-</p>
+           
+              <div style={{ color: T.dim, lineHeight: 1.75, fontSize: "15px" }}>
+  <p style={{ margin: "0 0 14px" }}>
+    I'm a B.Tech Computer Science student at Dr. D. Y. Patil Institute of
+    Technology, Pune, under Dnyaneshwar Vidyapeeth Global University
+    (DYPDPGU) — currently in my second year and already deep into building
+    real-world web applications.
+  </p>
+  <p style={{ margin: "0 0 14px" }}>
+    My stack of choice is MERN (MongoDB, Express.js, React, Node.js). I
+    love the full picture — from designing the UI to wiring up APIs and
+    databases.
+  </p>
+  <p style={{ margin: "0 0 14px" }}>
+    Beyond web dev, I'm actively exploring Artificial Intelligence & Data
+    Science, which is where I see my future headed.
+  </p>
+  <p style={{ margin: "0 0 14px" }}>
+    I recently completed a Web Development{" "}
+    <span style={{ color: GRAD1, fontWeight: 700 }}>Internship</span> at
+    Drops of Change Welfare NGO, where I built and maintained web
+    solutions for social welfare initiatives.
+  </p>
+  <p style={{ margin: 0 }}>
+    At college, I'm also a Technical Team member at Kryptonex Tech &
+    Innovation Club and a member of the Lumi Vision Club.
+  </p>
+</div>
+
           <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginTop: "20px" }}>
             {SKILLS.map((s) => (
               <span key={s} className="skill-pill" style={{ border: `1px solid ${T.line}`, borderRadius: "6px", padding: "6px 12px", fontSize: "13px", color: T.text, background: T.pillBg }}>
