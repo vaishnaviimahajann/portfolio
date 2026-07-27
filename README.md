@@ -8,7 +8,7 @@ My personal developer portfolio — built to showcase my projects, skills, and e
 
 ## 📌 About
 
-This is a single-page React portfolio designed to give recruiters a quick, clean overview of who I am, what I've built, and how to reach me — no clutter, just what matters.
+This is a single-page React portfolio designed to give recruiters a quick, clean overview of who I am, what I've built, and how to reach me — no clutter, just what matters..
 
 ---
 
