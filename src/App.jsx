@@ -198,9 +198,8 @@ export default function App() {
         <div style={{ background: T.card, border: `1px solid ${T.line}`, borderRadius: "12px", padding: "28px", boxShadow: T.shadow }}>
           <div style={{ color: T.dim, lineHeight: 1.75, fontSize: "15px" }}>
             <p style={{ margin: "0 0 14px" }}>
-              I'm a B.Tech Computer Science student at Dr. D. Y. Patil
-              Institute of Technology, Pune, under Dnyaneshwar Vidyapeeth
-              Global University (DYPDPGU) — currently in my second year and
+              I'm a B.Tech Computer Science student at Dr. D. Y. Patil ( Dyaan Prasad Global University {DYPDPGU} )
+              Institute of Technology, Pune, currently in my Third year and
               already deep into building real-world web applications.
             </p>
             <p style={{ margin: "0 0 14px" }}>
