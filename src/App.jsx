@@ -1,11 +1,72 @@
-import React from "react";
-import { Github, Linkedin, Mail, FileText, ExternalLink, Download } from "lucide-react";
+import React, { useState } from "react";
+import { Github, Linkedin, Mail, FileText, ExternalLink, Download, ChevronLeft, ChevronRight } from "lucide-react";
 
 function LeetCodeIcon({ size = 16, color = "currentColor" }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill={color} xmlns="http://www.w3.org/2000/svg">
       <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z" />
     </svg>
+  );
+}
+
+const HIGHLIGHT_GROUPS = [
+  {
+    label: "NGO Internship",
+    items: [
+      { title: "Certificate", img: "/certificates/internship_certificate.jpg" },
+      { title: "Recommendation Letter", img: "/certificates/recommendation_letter.jpg" },
+    ],
+  },
+  {
+    label: "LeetCode",
+    items: [{ title: "50 Days Badge", img: "/certificates/leetcode_50days.jpg" }],
+  },
+  {
+    label: "Kryptonex",
+    items: [{ title: "Coming soon", img: null }],
+  },
+];
+
+function HighlightBox({ group, T, GRAD1 }) {
+  const [idx, setIdx] = useState(0);
+  const multi = group.items.length > 1;
+  const current = group.items[idx];
+
+  return (
+    <div style={{ width: "170px", background: T.card, border: `1px solid ${T.line}`, borderRadius: "12px", overflow: "hidden", boxShadow: T.shadow }}>
+      <div style={{ position: "relative", width: "100%", height: "110px", background: T.bg }}>
+        {current.img ? (
+          <img src={current.img} alt={current.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+        ) : (
+          <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", color: T.dim, fontSize: "11px" }}>
+            Coming soon
+          </div>
+        )}
+        {multi && (
+          <>
+            <button onClick={() => setIdx((i) => (i - 1 + group.items.length) % group.items.length)} style={{ position: "absolute", left: "4px", top: "50%", transform: "translateY(-50%)", background: "rgba(0,0,0,0.5)", border: "none", borderRadius: "50%", width: "22px", height: "22px", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer" }}>
+              <ChevronLeft size={12} color="#fff" />
+            </button>
+            <button onClick={() => setIdx((i) => (i + 1) % group.items.length)} style={{ position: "absolute", right: "4px", top: "50%", transform: "translateY(-50%)", background: "rgba(0,0,0,0.5)", border: "none", borderRadius: "50%", width: "22px", height: "22px", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer" }}>
+              <ChevronRight size={12} color="#fff" />
+            </button>
+          </>
+        )}
+      </div>
+      <div style={{ padding: "10px 12px" }}>
+        <p style={{ fontSize: "12px", color: T.text, fontWeight: 700, margin: "0 0 4px" }}>{group.label}</p>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+          <span style={{ fontSize: "10px", color: T.dim }}>{current.title}</span>
+          {multi && (
+            <div style={{ display: "flex", gap: "3px" }}>
+              {group.items.map((_, i) => (
+                <div key={i} style={{ width: "4px", height: "4px", borderRadius: "50%", background: i === idx ? GRAD1 : T.line }} />
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -190,6 +251,12 @@ export default function App() {
             <LeetCodeIcon size={16} color={T.dim} />
           </a>
         </div>
+
+        <div style={{ display: "flex", gap: "14px", flexWrap: "wrap", justifyContent: "center", marginTop: "28px" }}>
+          {HIGHLIGHT_GROUPS.map((g) => (
+            <HighlightBox key={g.label} group={g} T={T} GRAD1={GRAD1} />
+          ))}
+        </div>
       </section>
 
       {/* About */}
@@ -198,11 +265,11 @@ export default function App() {
         <div style={{ background: T.card, border: `1px solid ${T.line}`, borderRadius: "12px", padding: "28px", boxShadow: T.shadow }}>
           <div style={{ color: T.dim, lineHeight: 1.75, fontSize: "15px" }}>
             <p style={{ margin: "0 0 14px" }}>
-             I'm a B.Tech Computer Science student at Dr. D. Y. Patil (Dyaan
-             Prasad Global University, DYPDPGU) Institute of Technology, Pune,
-             currently in my third year and already deep into building
-             real-world web applications.
-</p>
+              I'm a B.Tech Computer Science student at Dr. D. Y. Patil (Dyaan
+              Prasad Global University, DYPDPGU) Institute of Technology, Pune,
+              currently in my third year and already deep into building
+              real-world web applications.
+            </p>
             <p style={{ margin: "0 0 14px" }}>
               My stack of choice is MERN (MongoDB, Express.js, React,
               Node.js). I love the full picture — from designing the UI to
