@@ -36,7 +36,9 @@ function HighlightBox({ group, T, GRAD1 }) {
     <div className="highlight-box" style={{ background: T.card, border: `1px solid ${T.line}`, borderRadius: "12px", overflow: "hidden", boxShadow: T.shadow }}>
       <div style={{ position: "relative", width: "100%", height: "110px", background: T.bg }}>
         {current.img ? (
-          <img src={current.img} alt={current.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+          <a href={current.img} target="_blank" rel="noreferrer" style={{ display: "block", width: "100%", height: "100%" }}>
+            <img src={current.img} alt={current.title} style={{ width: "100%", height: "100%", objectFit: "cover", cursor: "pointer" }} />
+          </a>
         ) : (
           <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", color: T.dim, fontSize: "11px" }}>
             Coming soon
