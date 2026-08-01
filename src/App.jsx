@@ -19,11 +19,11 @@ const HIGHLIGHT_GROUPS = [
   },
   {
     label: "LeetCode",
-    items: [{ title: "50 Days Badge", img: "/certificates/leetcode_50days.jpg" }],
+    items: [{ title: "50 Days Badge", img: "/certificates/leetcode_50days.png" }],
   },
-  {
-    label: "Kryptonex",
-    items: [{ title: "Coming soon", img: null }],
+{
+    label: "Hackathon",
+    items: [{ title: "Women Who Master - Logitech", img: "/certificates/hackathon_certificate.jpg" }],
   },
 ];
 
