@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Github, Linkedin, Mail, FileText, ExternalLink, Download, ChevronLeft, ChevronRight } from "lucide-react";
+import { Github, Linkedin, Mail, FileText, ExternalLink, Download, ChevronLeft, ChevronRight, X } from "lucide-react";
 
 function LeetCodeIcon({ size = 16, color = "currentColor" }) {
   return (
@@ -27,7 +27,7 @@ const HIGHLIGHT_GROUPS = [
   },
 ];
 
-function HighlightBox({ group, T, GRAD1 }) {
+function HighlightBox({ group, T, GRAD1, onOpen }) {
   const [idx, setIdx] = useState(0);
   const multi = group.items.length > 1;
   const current = group.items[idx];
@@ -36,9 +36,12 @@ function HighlightBox({ group, T, GRAD1 }) {
     <div className="highlight-box" style={{ background: T.card, border: `1px solid ${T.line}`, borderRadius: "12px", overflow: "hidden", boxShadow: T.shadow }}>
       <div style={{ position: "relative", width: "100%", height: "110px", background: T.bg }}>
         {current.img ? (
-          <a href={current.img} target="_blank" rel="noreferrer" style={{ display: "block", width: "100%", height: "100%" }}>
-            <img src={current.img} alt={current.title} style={{ width: "100%", height: "100%", objectFit: "cover", cursor: "pointer" }} />
-          </a>
+          <button
+            onClick={() => onOpen(group, idx)}
+            style={{ display: "block", width: "100%", height: "100%", border: "none", padding: 0, background: "none", cursor: "pointer" }}
+          >
+            <img src={current.img} alt={current.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+          </button>
         ) : (
           <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", color: T.dim, fontSize: "11px" }}>
             Coming soon
@@ -142,6 +145,7 @@ const LINKS = {
 };
 
 export default function App() {
+  const [lightbox, setLightbox] = useState(null);
   return (
     <div style={{ background: T.bg, color: T.text, minHeight: "100vh", overflowX: "hidden", fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif" }}>
       <style>{`
@@ -262,7 +266,7 @@ export default function App() {
 
         <div className="highlights-row" style={{ display: "flex", gap: "14px", flexWrap: "wrap", justifyContent: "center", marginTop: "28px" }}>
           {HIGHLIGHT_GROUPS.map((g) => (
-            <HighlightBox key={g.label} group={g} T={T} GRAD1={GRAD1} />
+            <HighlightBox key={g.label} group={g} T={T} GRAD1={GRAD1} onOpen={(group, idx) => setLightbox({ group, idx })} />
           ))}
         </div>
       </section>
@@ -361,6 +365,126 @@ export default function App() {
           </a>
         </div>
       </section>
+
+      {/* Certificate Lightbox */}
+      {lightbox && (
+        <div
+          onClick={() => setLightbox(null)}
+          style={{
+            position: "fixed",
+            inset: 0,
+            background: "rgba(0,0,0,0.8)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            zIndex: 100,
+            padding: "20px",
+          }}
+        >
+          <div onClick={(e) => e.stopPropagation()} style={{ maxWidth: "500px", width: "100%" }}>
+            <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: "8px" }}>
+              <button
+                onClick={() => setLightbox(null)}
+                style={{
+                  background: T.card,
+                  border: `1px solid ${T.line}`,
+                  borderRadius: "50%",
+                  width: "36px",
+                  height: "36px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  cursor: "pointer",
+                }}
+              >
+                <X size={18} color={T.text} />
+              </button>
+            </div>
+
+            <div style={{ position: "relative" }}>
+              <img
+                src={lightbox.group.items[lightbox.idx].img}
+                alt={lightbox.group.items[lightbox.idx].title}
+                style={{ width: "100%", borderRadius: "12px", boxShadow: "0 10px 40px rgba(0,0,0,0.5)" }}
+              />
+
+              {lightbox.group.items.length > 1 && (
+                <>
+                  <button
+                    onClick={() =>
+                      setLightbox((l) => ({
+                        ...l,
+                        idx: (l.idx - 1 + l.group.items.length) % l.group.items.length,
+                      }))
+                    }
+                    style={{
+                      position: "absolute",
+                      left: "10px",
+                      top: "50%",
+                      transform: "translateY(-50%)",
+                      background: "rgba(0,0,0,0.6)",
+                      border: "none",
+                      borderRadius: "50%",
+                      width: "38px",
+                      height: "38px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      cursor: "pointer",
+                    }}
+                  >
+                    <ChevronLeft size={18} color="#fff" />
+                  </button>
+                  <button
+                    onClick={() =>
+                      setLightbox((l) => ({
+                        ...l,
+                        idx: (l.idx + 1) % l.group.items.length,
+                      }))
+                    }
+                    style={{
+                      position: "absolute",
+                      right: "10px",
+                      top: "50%",
+                      transform: "translateY(-50%)",
+                      background: "rgba(0,0,0,0.6)",
+                      border: "none",
+                      borderRadius: "50%",
+                      width: "38px",
+                      height: "38px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      cursor: "pointer",
+                    }}
+                  >
+                    <ChevronRight size={18} color="#fff" />
+                  </button>
+                </>
+              )}
+            </div>
+
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "10px", marginTop: "12px" }}>
+              <p style={{ color: T.dim, fontSize: "13px", margin: 0 }}>{lightbox.group.items[lightbox.idx].title}</p>
+              {lightbox.group.items.length > 1 && (
+                <div style={{ display: "flex", gap: "4px" }}>
+                  {lightbox.group.items.map((_, i) => (
+                    <div
+                      key={i}
+                      style={{
+                        width: "5px",
+                        height: "5px",
+                        borderRadius: "50%",
+                        background: i === lightbox.idx ? GRAD1 : T.line,
+                      }}
+                    />
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
