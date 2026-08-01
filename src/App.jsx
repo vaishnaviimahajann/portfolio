@@ -21,7 +21,7 @@ const HIGHLIGHT_GROUPS = [
     label: "LeetCode",
     items: [{ title: "50 Days Badge", img: "/certificates/leetcode_50days.png" }],
   },
-{
+  {
     label: "Hackathon",
     items: [{ title: "Women Who Master - Logitech", img: "/certificates/hackathon_certificate.jpg" }],
   },
@@ -96,6 +96,8 @@ const SKILLS = [
   "SQL",
   "C++",
   "Git & GitHub",
+  "Docker",
+  "CI/CD",
 ];
 
 const PROJECTS = [
@@ -226,7 +228,7 @@ export default function App() {
           </span>
         </h1>
         <p style={{ color: T.dim, fontSize: "16px", lineHeight: 1.6, maxWidth: "460px", margin: "0 0 28px" }}>
-          Second-year CS student building with the MERN stack, with a strong interest in AI, ML and Data Science.
+          Third-year CS student building with the MERN stack, with a strong interest in AI, ML and Data Science.
         </p>
         <div style={{ display: "flex", gap: "14px", flexWrap: "wrap", justifyContent: "center" }}>
           <a href="#projects" className="cta-primary" style={{ padding: "11px 24px", borderRadius: "8px", background: `linear-gradient(135deg, ${GRAD1}, ${GRAD2})`, color: "#211217", fontWeight: 600, fontSize: "14px", textDecoration: "none" }}>
@@ -282,8 +284,12 @@ export default function App() {
             <p style={{ margin: "0 0 14px" }}>
               I recently completed a Web Development{" "}
               <span style={{ color: GRAD1, fontWeight: 700 }}>Internship</span>{" "}
-              at Drops of Change Welfare NGO, where I built and maintained
-              web solutions for social welfare initiatives.
+              at{" "}
+              <a href="https://www.dropsofchange.in" target="_blank" rel="noreferrer" style={{ color: GRAD1, textDecoration: "underline" }}>
+                Drops of Change Welfare NGO
+              </a>
+              , where I built and maintained web solutions for social welfare
+              initiatives.
             </p>
             <p style={{ margin: 0 }}>
               At college, I'm also a Technical Team member at Kryptonex Tech
