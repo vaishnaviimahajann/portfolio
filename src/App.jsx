@@ -117,10 +117,10 @@ const PROJECTS = [
   },
   {
     name: "Portfolio Website",
-    desc: "My personal developer portfolio, built from scratch with React and deployed using Docker with a full CI/CD pipeline via GitHub Actions.",
+    desc: "My personal developer portfolio, built from scratch with React. Dockerized with an Nginx-based CI/CD pipeline (GitHub Actions) for containerized deployment, and hosted as a static site for fast, always-on delivery.",
     tags: ["React", "Docker", "Nginx", "GitHub Actions", "CI/CD"],
     github: "https://github.com/vaishnaviimahajann/portfolio",
-    live: "https://portfolio-p0zp.onrender.com",
+    live: "https://portfolio-iblx.onrender.com",
   },
   {
     name: "SkillSync",
