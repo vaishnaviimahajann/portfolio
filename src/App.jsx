@@ -33,7 +33,7 @@ function HighlightBox({ group, T, GRAD1 }) {
   const current = group.items[idx];
 
   return (
-    <div style={{ width: "170px", background: T.card, border: `1px solid ${T.line}`, borderRadius: "12px", overflow: "hidden", boxShadow: T.shadow }}>
+    <div className="highlight-box" style={{ background: T.card, border: `1px solid ${T.line}`, borderRadius: "12px", overflow: "hidden", boxShadow: T.shadow }}>
       <div style={{ position: "relative", width: "100%", height: "110px", background: T.bg }}>
         {current.img ? (
           <img src={current.img} alt={current.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
@@ -157,10 +157,14 @@ export default function App() {
         .icon-btn:hover { transform: translateY(-3px); border-color: ${GRAD2}; }
         .section { scroll-margin-top: 90px; }
 
+        .highlight-box { width: 170px; }
+
         @media (max-width: 640px) {
           .navbar { padding: 12px 16px !important; }
           .navbar-name { font-size: 14px !important; }
           .navbar-links { gap: 12px !important; }
+          .highlights-row { gap: 10px !important; }
+          .highlight-box { width: calc(50% - 5px) !important; }
         }
       `}</style>
 
@@ -254,7 +258,7 @@ export default function App() {
           </a>
         </div>
 
-        <div style={{ display: "flex", gap: "14px", flexWrap: "wrap", justifyContent: "center", marginTop: "28px" }}>
+        <div className="highlights-row" style={{ display: "flex", gap: "14px", flexWrap: "wrap", justifyContent: "center", marginTop: "28px" }}>
           {HIGHLIGHT_GROUPS.map((g) => (
             <HighlightBox key={g.label} group={g} T={T} GRAD1={GRAD1} />
           ))}
