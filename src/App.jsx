@@ -13,13 +13,13 @@ const HIGHLIGHT_GROUPS = [
   {
     label: "NGO Internship",
     items: [
-      { title: "Certificate", img: "/certificates/internship_certificate.pdf" },
-      { title: "Recommendation Letter", img: "/certificates/recommendation_letter.pdf" },
+      { title: "Certificate", img: "/certificates/internship_certificate.jpg" },
+      { title: "Recommendation Letter", img: "/certificates/recommendation_letter.jpg" },
     ],
   },
   {
     label: "LeetCode",
-    items: [{ title: "50 Days Badge", img: "/certificates/leetcode_50days.png" }],
+    items: [{ title: "50 Days Badge", img: "/certificates/leetcode_50days.jpg" }],
   },
   {
     label: "Kryptonex",
