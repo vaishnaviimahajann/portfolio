@@ -25,6 +25,10 @@ const HIGHLIGHT_GROUPS = [
     label: "Hackathon",
     items: [{ title: "Women Who Master - Logitech", img: "/certificates/hackathon_certificate.jpg" }],
   },
+  {
+    label: "participation",
+    items:[{ title : "QuizOff 2026 - India's Biggest AI Quiz", img : "/certificates/quizoff_certificate.png" }] ,
+  }
 ];
 
 function HighlightBox({ group, T, GRAD1, onOpen }) {
