@@ -2,7 +2,7 @@
 
 My personal developer portfolio — built to showcase my projects, skills, and experience as a Full Stack Developer with a growing focus on AI, ML, and Data Science.
 
-🔗 **Live Site:** [Coming soon after deployment]
+🔗 **Live Site:** https://portfolio-iblx.onrender.com
 
 ---
 
