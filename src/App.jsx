@@ -122,7 +122,7 @@ const PROJECTS = [
     desc: "Full-stack NGO volunteer management platform replacing WhatsApp-based updates. Role-based dashboards for Coordinators, Managers & Volunteers with invite-only onboarding and attendance tracking.",
     tags: ["React", "Node.js", "Express", "MongoDB", "JWT", "Docker", "CI/CD"],
     github: "https://github.com/vaishnaviimahajann/VolunteerBridge",
-    live: "#",
+    live: "https://volunteerbridge-1.onrender.com/",
   },
   {
     name: "Portfolio Website",
@@ -136,7 +136,7 @@ const PROJECTS = [
     desc: "A platform for college students to find skill-based teammates. Includes discovery/search by skill, connection requests, profile management, and real-time chat via Socket.io.",
     tags: ["React", "Node.js", "Express", "MongoDB", "Socket.io", "JWT"],
     github: "https://github.com/vaishnaviimahajann/WEBX_project",
-    live: "#",
+    live: "https://skillsync-1.onrender.com",
   },
 ];
 
