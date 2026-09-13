@@ -136,7 +136,7 @@ const PROJECTS = [
     desc: "A platform for college students to find skill-based teammates. Includes discovery/search by skill, connection requests, profile management, and real-time chat via Socket.io.",
     tags: ["React", "Node.js", "Express", "MongoDB", "Socket.io", "JWT"],
     github: "https://github.com/vaishnaviimahajann/WEBX_project",
-    live: "https://skillsync-vogf.onrender.com",
+    live: "https://skillsync-1-hfmw.onrender.com",
   },
 ];
 
