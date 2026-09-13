@@ -32,7 +32,7 @@ const HIGHLIGHT_GROUPS = [
     
   },
   {
-    label: "participation",
+    label: "Unstop - participation",
     items:[{ title : "QuizOff 2026 - India's Biggest AI Quiz", img : "/certificates/quizoff_certificate.png" }] ,
     items:[{ title : "Hackathon Certificate", img : "/certificates/image.png" }]
   }
