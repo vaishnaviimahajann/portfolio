@@ -24,11 +24,11 @@ const HIGHLIGHT_GROUPS = [
   {
     label: "Hackathon",
     items: [{ title: "Women Who Master - Logitech", img: "/certificates/hackathon_certificate.jpg" }],
-    items: [{ title: "Hackathon Certificate", img: "/certificates/ADOBE.pdf" }],
+    items: [{ title: "Hackathon Certificate", img: "/certificates/adobehackthon.jpg" }],
   },
   {
     label: "Connect-For",
-    items: [{ title: "Connect-For Certificate", img: "/certificates/Vaishnavi Ganesh Mahajan _ ConnectFor Volunteering Certificate.pdf" }],
+    items: [{ title: "Connect-For Certificate", img: "/certificates/connectfor.jpg" }],
     
   },
   {
