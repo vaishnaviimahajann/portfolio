@@ -24,11 +24,19 @@ const HIGHLIGHT_GROUPS = [
   {
     label: "Hackathon",
     items: [{ title: "Women Who Master - Logitech", img: "/certificates/hackathon_certificate.jpg" }],
+    items: [{ title: "Hackathon Certificate", img: "/certificates/ADOBE.pdf" }],
+  },
+  {
+    label: "Connect-For",
+    items: [{ title: "Connect-For Certificate", img: "/certificates/Vaishnavi Ganesh Mahajan _ ConnectFor Volunteering Certificate.pdf" }],
+    
   },
   {
     label: "participation",
     items:[{ title : "QuizOff 2026 - India's Biggest AI Quiz", img : "/certificates/quizoff_certificate.png" }] ,
+    items:[{ title : "Hackathon Certificate", img : "/certificates/image.png" }]
   }
+  
 ];
 
 function HighlightBox({ group, T, GRAD1, onOpen }) {
