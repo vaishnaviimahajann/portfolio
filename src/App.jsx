@@ -18,6 +18,12 @@ const HIGHLIGHT_GROUPS = [
     ],
   },
   {
+    label: "Web Development Internship",
+    items: [
+      { title: "Certificate", img: "/certificates/internship.png" }, 
+    ],
+  },
+  {
     label: "LeetCode",
     items: [{ title: "50 Days Badge", img: "/certificates/leetcode_50days.png" }],
   },
