@@ -34,5 +34,3 @@ This is a single-page React portfolio designed to give recruiters a quick, clean
 | Deployment | Vercel |
 | Containerization | Docker + Nginx (optional, for Render deploys) |
 | CI/CD | GitHub Actions |
-
----
